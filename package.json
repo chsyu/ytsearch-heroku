@@ -11,8 +11,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+  },
+  "dependencies": {
     "webpack-dev-middleware": "^1.5.1",
     "webpack-dev-server": "^1.14.0",
+    "webpack-hot-middleware": "^2.10.0",
     "webpack": "^1.12.9",
     "babel-cli": "^6.6.5",
     "babel-core": "^6.2.1",
@@ -26,7 +29,5 @@
     "react-redux": "^4.0.0",
     "redux": "^3.0.4",
     "youtube-api-search": "0.0.5"
-  },
-  "dependencies": {
   }
 }
