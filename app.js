@@ -7,8 +7,11 @@ var path              = require('path'),
 const app             = express(),
       compiler        = webpack(config);
 
+if(process.env.NODE_ENV !== 'production') {
+  app.use(webpackMiddleware(compiler));
+}
+
 app.use(express.static(__dirname + '/public'));
-app.use(webpackMiddleware(compiler));
 app.get('*', function response(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
